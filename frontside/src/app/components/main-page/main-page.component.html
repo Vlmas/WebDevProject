@@ -1,0 +1,22 @@
+<div class="main-page-container">
+    <div class="main-assets">
+        <img *ngIf="!switch" (click)="switch=!switch;" src="../../../assets/images/mainpagephoto.jpg"> <!--*ngIf="!switch"-->
+
+        <video *ngIf="switch" (click)="switch=!switch;" autoplay loop width="100%">
+            <source src="../../../assets/videos/IS_Hero.mp4">
+        </video>
+        
+        <p class="exp">EXPERIENCE THE LEXUS</p>
+        <p class="perf">PERFOMANCE AT THE PEAK OF LUXURY</p>
+        <button class="expl-btn">EXPLORE</button>
+    </div>
+
+    <div class="shopping-tools">
+        <p class="st-logo">SHOPPING TOOLS</p>
+        <div class="st-imgs">
+            <p class="st-item"><img style="padding-bottom: 9px;" src="../../../assets/images/shoppingcar1.jpg"> BUILD YOUR LEXUS</p>
+            <p class="st-item"><img src="../../../assets/images/shoppinglogo.jpg"> FIND A DEALER</p>
+            <p class="st-item"><img src="../../../assets/images/shoppingcar2.jpg"> OFFERS</p>
+        </div>
+    </div>
+</div>
