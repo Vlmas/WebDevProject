@@ -1,0 +1,19 @@
+<div class="build-your-lexus-container">
+    <div class="title">
+        <h1>SELECT A MODEL TO BUILD</h1>
+        <h2>WE'LL MATCH YOU UP WITH A LEXUS YOU'LL LOVE</h2>
+    </div>
+    <h1 class="body">HYBRIDS</h1>
+    <div class="cars-gallery">
+        <div *ngFor="let car of cars" class="car-detail">
+            <img src="{{car.url}}" alt="">
+            <div class="space-between">
+                <div>
+                    <p class="car-model">{{car.model}}</p>
+                    <p class="car-starting-price">STARTING AT ${{car.startingPrice}}*</p>
+                </div>
+                <button class="build-button">BUILD YOURS</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,7 +16,7 @@
     z-index: -1;
 }
 
-.main-assets p, .main-assets button {
+.main-assets p, .main-assets button, .d-design p, .d-design button {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -41,10 +41,11 @@
 .expl-btn {
     bottom: 7%;
     height: 50px;
-    width: 200px;
+    width: 220px;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 1px;
+    background-color: #fff;
     color: #242424;
     cursor: pointer;
     border: 2px solid #fff;
@@ -57,11 +58,11 @@
 }
 
 .shopping-tools {
-    margin: 45px auto 45px auto;
+    margin: 45px auto 0 auto;
     text-align: center;
-    width: 96%;
+    width: 98%;
     padding-bottom: 45px;
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid #d4d2d2;
 }
 
 .st-logo {
@@ -90,4 +91,115 @@
 
 .st-item img {
     margin-bottom: 10px;
+}
+
+.vehicles-offers {
+    margin: 45px auto 55px auto;
+    width: 88%;
+    letter-spacing: 1px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.vo-assets {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+.vo-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.vo-subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.vo-design {
+    text-align: center;
+}
+
+.vo-design img {
+    margin-bottom: 25px;
+}
+
+.vo-design button {
+    height: 50px;
+    width: 220px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #242424;
+    background-color: #fff;
+    cursor: pointer;
+    border: 2px solid #000;
+}
+
+.vo-design button:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 150ms;
+}
+
+.discover-lex {
+    padding-top: 45px;
+    border-top: 1px solid #d4d2d2;
+    width: 98%;
+    margin: 0 auto 45px auto;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #d4d2d2;
+}
+
+.d-assets {
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-ls, .d-ux, .d-nx {
+    position: relative;
+}
+
+.d-design p {
+    bottom: 20%;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.d-design button {
+    bottom: 1%;
+    height: 50px;
+    width: 220px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: #fff;
+    color: #242424;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.d-design button:hover {
+    background-color: #0000;
+    color: #fff;
+    transition: 150ms;
+}
+
+.d-design {
+    overflow: hidden;
+}
+
+.d-design img {
+    transition: all 0.5s ease;
+    display: block;
+}
+
+.d-design img:hover {
+    transform: scale(1.2);
 }
