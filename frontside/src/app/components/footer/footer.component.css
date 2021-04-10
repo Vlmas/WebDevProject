@@ -1,12 +1,15 @@
 .footer-container {
-    height: 700px;
+    height: 690px;
     width: 100%;
     background-color: #000;
+    position: relative;
 }
 
 footer {
     color: #fefefe;
-    min-height: 100vh;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .box-footer {
@@ -50,4 +53,5 @@ h4 {
 
 #copyright {
     color:rgba(255, 255, 255, 0.5);
+    margin-bottom: 50px;
 }

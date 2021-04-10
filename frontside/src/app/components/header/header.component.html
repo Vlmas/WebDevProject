@@ -1,30 +1,30 @@
 <div class="header-container" style="height: 90px;">
-    <div class="box" *ngIf="headerFlag">
-        <img class="logo" src="../../../assets/images/logo_second.png" width="100">
+    <div class="box">
+        <img [routerLink]="['']" class="logo" src="../../../assets/images/logo_second.png" width="100">
         
         <div class="right-side">
             <div class="car-bodies">
-                <a>SEDANS</a>
-                <a>SUVS</a>
-                <a>COUPES</a>
-                <a>HYBRIDS</a>
-                <a>PERFORMANCE</a>
-                <a>FUTURE</a>
+                <p [routerLink]="['/sedans']">SEDANS</p>
+                <p [routerLink]="['/suvs']">SUVS</p>
+                <p [routerLink]="['/coupes']">COUPES</p>
+                <p [routerLink]="['/hybrids']">HYBRIDS</p>
+                <p [routerLink]="['/performance']">PERFORMANCE</p>
+                <p [routerLink]="['/future']">FUTURE</p>
             </div>
     
             <div class="credits">
-                <a>Owners</a>
-                <a>L/Certified</a>
-                <a>Find A Dealer</a>
+                <p [routerLink]="['/owners']">Owners</p>
+                <p [routerLink]="['/l-certified']">L/Certified</p>
+                <p [routerLink]="['/dealers']">Find A Dealer</p>
                 <img src="../../../assets/images/search.png" (click)="search()" width="30" height="30">
             </div>
         </div>
     </div>
 
-    <div class="search-box" *ngIf="!headerFlag">
-        <!-- <img src="../../../assets/images/search.png" width="30" height="30"> -->
+    <div class="search-box">
+        <img src="../../../assets/images/search.png" width="30" height="30">
 
-        <input type="text" id="search-input" placeholder="Search">
+        <input type="text" class="search-input" placeholder="SEARCH">
 
         <img src="../../../assets/images/cancel.png" (click)="back()" width="30" height="30">
     </div>

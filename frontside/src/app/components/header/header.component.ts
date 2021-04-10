@@ -14,37 +14,44 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void { }
   
   search(): void {
-    this.headerFlag = !this.headerFlag;
-    // console.log('search function called')
-    // let elem = this.searchBar.nativeElement.querySelector(".search-box");
-    // let width = -1500;
-    // let id = setInterval(frame, 10);
+    if (this.headerFlag === false) {
+      return;
+    }
 
-    // function frame() {
-    //   if (width >= 0) {
-    //     clearInterval(id);
-    //   } else {
-    //     width += 20;
-    //     elem.style.marginLeft = width + 'px';
-    //   }
-    //   console.log("OK");
-    // }
+    this.headerFlag = false;
+    let elem = this.searchBar.nativeElement.querySelector(".header-container .search-box");
+    let position = -2000;
+    let id = setInterval(frame, 10);
+
+    function frame() {
+      if (position >= 0) {
+        clearInterval(id);
+      } else {
+        console.log(position);
+        position += 20;
+        elem.style.marginLeft = position + 'px';
+      }
+    }
   }
 
   back(): void {
-    this.headerFlag = !this.headerFlag;
-    // let elem = this.searchBar.nativeElement.querySelector(".search-box");
-    // let width = 0;
-    // let id = setInterval(frame, 10);
+    if (this.headerFlag === true) {
+      return;
+    }
 
-    // function frame() {
-    //   if (width <= -1500) {
-    //     clearInterval(id);
-    //   } else {
-    //     width -= 20;
-    //     elem.style.marginLeft = width + 'px';
-    //   }
-    //   console.log("OK");
-    // }
+    this.headerFlag = true;
+    let elem = this.searchBar.nativeElement.querySelector(".header-container .search-box");
+    let position = 0;
+    let id = setInterval(frame, 10);
+
+    function frame() {
+      if (position <= -2000) {
+        clearInterval(id);
+      } else {
+        console.log(position);
+        position -= 20;
+        elem.style.marginLeft = position + 'px';
+      }
+    }
   }
 }
