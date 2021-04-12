@@ -8,50 +8,19 @@ import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   headerFlag: boolean = true;
+  mobile: boolean = false;
 
   constructor(private searchBar: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void { }
   
   search(): void {
-    if (this.headerFlag === false) {
-      return;
-    }
-
-    this.headerFlag = false;
     let elem = this.searchBar.nativeElement.querySelector(".header-container .search-box");
-    let position = -2000;
-    let id = setInterval(frame, 10);
-
-    function frame() {
-      if (position >= 0) {
-        clearInterval(id);
-      } else {
-        console.log(position);
-        position += 20;
-        elem.style.marginLeft = position + 'px';
-      }
-    }
+    elem.classList.toggle("search-active");
   }
 
-  back(): void {
-    if (this.headerFlag === true) {
-      return;
-    }
-
-    this.headerFlag = true;
-    let elem = this.searchBar.nativeElement.querySelector(".header-container .search-box");
-    let position = 0;
-    let id = setInterval(frame, 10);
-
-    function frame() {
-      if (position <= -2000) {
-        clearInterval(id);
-      } else {
-        console.log(position);
-        position -= 20;
-        elem.style.marginLeft = position + 'px';
-      }
-    }
+  slide(): void {
+    let elem = this.searchBar.nativeElement.querySelector(".header-container .mobile");
+    elem.classList.toggle("show");
   }
 }

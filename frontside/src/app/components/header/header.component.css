@@ -44,7 +44,6 @@ p:hover {
 }
 
 .search-box {
-    transition-timing-function: ease;
     display: flex;
     align-items: center;
     position: absolute;
@@ -70,4 +69,74 @@ p:hover {
 
 img {
     margin: 20px;
+}
+
+.menu-button {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+.burger {
+    margin: 20px;
+    cursor: pointer;  
+}
+
+.burger div {
+    border-radius: 1px;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(160, 160, 160);
+    margin: 5px;
+}
+
+@media screen and (max-width:1100px) {
+    .menu-button {
+        display: flex; 
+        align-items: center;
+    }
+    .mobile {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 500px;
+        color: white;
+        background-color: black;
+    }
+    .mobile p {
+        text-align: center;
+        border-bottom: 1px solid white;
+        color: white;
+        padding: 15px;
+    }
+    .mobile-search {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid white;
+    }
+    .mobile-search p { 
+        border: none;
+    }
+    .right-side, .car-bodies, .credits {
+        display: none;
+    }
+}
+
+.show {
+    height: 0px;
+}
+
+.search-active {
+    margin-left: 0px;
+}
+
+.slide-active {
+    height: 0px;
+    display: none;
 }
