@@ -43,13 +43,19 @@ button:focus, img:focus, p:focus {
     background-color: #fff;
     color: #242424;
     cursor: pointer;
+    transition: 150ms;
     border: 2px solid #fff;
 }
 
 .expl-btn:hover {
     background-color: #0000;
     color: #fff;
-    transition: 150ms;
+    /* width: 230px;
+    height: 60px;
+    bottom: 5%;
+    letter-spacing: 2px; */
+    /* color: goldenrod; */
+    /* color:mediumblue; */
 }
 
 .shopping-tools {
