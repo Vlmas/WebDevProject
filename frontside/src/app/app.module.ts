@@ -9,16 +9,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { BuildYourLexusComponent } from './components/build-your-lexus/build-your-lexus.component';
 import { DealersComponent } from './components/dealers/dealers.component';
-import { SedansComponent } from './components/sedans/sedans.component';
-import { SuvsComponent } from './components/suvs/suvs.component';
-import { CoupesComponent } from './components/coupes/coupes.component';
-import { HybridsComponent } from './components/hybrids/hybrids.component';
-import { PerformanceComponent } from './components/performance/performance.component';
 import { FutureComponent } from './components/future/future.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { OwnersComponent } from './components/owners/owners.component';
 import { LCertifiedComponent } from './components/l-certified/l-certified.component';
 import { DiveIntoLexusComponent } from './components/dive-into-lexus/dive-into-lexus.component';
+import { CarComponent } from './components/car/car.component';
+import { CarDistributorComponent } from './components/car-distributor/car-distributor.component';
 
 @NgModule({
   declarations: [
@@ -28,16 +25,13 @@ import { DiveIntoLexusComponent } from './components/dive-into-lexus/dive-into-l
     MainPageComponent,
     BuildYourLexusComponent,
     DealersComponent,
-    SedansComponent,
-    SuvsComponent,
-    CoupesComponent,
-    HybridsComponent,
-    PerformanceComponent,
     FutureComponent,
     NotFoundComponent,
     OwnersComponent,
     LCertifiedComponent,
-    DiveIntoLexusComponent
+    DiveIntoLexusComponent,
+    CarComponent,
+    CarDistributorComponent
   ],
   imports: [
     BrowserModule,

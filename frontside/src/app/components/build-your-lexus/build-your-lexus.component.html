@@ -6,10 +6,10 @@
     <h1 class="body">HYBRIDS</h1>
     <div class="cars-gallery">
         <div *ngFor="let car of cars" class="car-detail">
-            <img src="{{car.url}}" alt="">
+            <img src="{{car.assetUrls}}" alt="">
             <div class="space-between">
                 <div>
-                    <p class="car-model">{{car.model}}</p>
+                    <p class="car-model">{{car.modelName}}</p>
                     <p class="car-starting-price">STARTING AT ${{car.startingPrice}}*</p>
                 </div>
                 <button class="build-button">BUILD YOURS</button>

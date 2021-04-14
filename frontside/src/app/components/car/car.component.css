@@ -1,0 +1,39 @@
+.showcase-video {
+    position: relative;
+}
+
+.descr {
+    position: absolute;
+    bottom: 50%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    color: #fff;
+}
+
+.year {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+}
+
+.superfat {
+    font-size: 70px;
+    letter-spacing: 7px;
+    margin-bottom: 13px;
+    padding-bottom: 30px;
+    width: 66%;
+    border-bottom: 5px solid #fff;
+}
+
+.small {
+    font-size: smaller;
+    margin-bottom: 10px;
+}
+
+.medium {
+    font-size: 32px;
+    letter-spacing: 2px;
+}

@@ -1,14 +1,14 @@
-<div class="header-container" style="height: 90px;">
+<div class="header-container">
     <div class="box">
         <img [routerLink]="['']" class="logo" src="../../../assets/images/logo_second.png" width="100">
         
         <div class="right-side">
             <div class="car-bodies">
-                <p [routerLink]="['/sedans']">SEDANS</p>
-                <p [routerLink]="['/suvs']">SUVS</p>
-                <p [routerLink]="['/coupes']">COUPES</p>
-                <p [routerLink]="['/hybrids']">HYBRIDS</p>
-                <p [routerLink]="['/performance']">PERFORMANCE</p>
+                <p [routerLink]="['/cars', 'sedan']" >SEDANS</p>
+                <p [routerLink]="['/cars', 'suv']">SUVS</p>
+                <p [routerLink]="['/cars', 'coupe']">COUPES</p>
+                <p [routerLink]="['/cars', 'hybrid']">HYBRIDS</p>
+                <p [routerLink]="['/cars', 'performance']">PERFORMANCE</p>
                 <p [routerLink]="['/future']">FUTURE</p>
             </div>
     
@@ -43,14 +43,14 @@
             <img src="../../../assets/images/search-white.png" width="25" height="25" style="margin: 0px">
             <p style="font-size:25px">SEARCH</p>
         </div>
-        <p>SEDANS</p>
-        <p>SUVS</p>
-        <p>COUPES</p>
-        <p>HYBRIDS</p>
-        <p>PERFORMANCE</p>
-        <p>FUTURE</p>
-        <p>Owners</p>
-        <p>L/Certified</p>
-        <p>Find A Dealer</p>
+        <p [routerLink]="['/cars', 'sedan']">SEDANS</p>
+        <p [routerLink]="['/cars', 'suv']">SUVS</p>
+        <p [routerLink]="['/cars', 'coupe']">COUPES</p>
+        <p [routerLink]="['/cars', 'hybrid']">HYBRIDS</p>
+        <p [routerLink]="['/cars', 'performance']">PERFORMANCE</p>
+        <p [routerLink]="['/future']">FUTURE</p>
+        <p [routerLink]="['/owners']">Owners</p>
+        <p [routerLink]="['/l-certified']">L/Certified</p>
+        <p [routerLink]="['/dealers']">Find A Dealer</p>
     </div>
 </div>

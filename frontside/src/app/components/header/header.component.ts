@@ -23,4 +23,8 @@ export class HeaderComponent implements OnInit {
     let elem = this.searchBar.nativeElement.querySelector(".header-container .mobile");
     elem.classList.toggle("show");
   }
+
+  refresh() {
+    window.location.reload();
+  }
 }
