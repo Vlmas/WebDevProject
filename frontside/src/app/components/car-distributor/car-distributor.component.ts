@@ -11,7 +11,6 @@ import { CarsBodyService } from 'src/app/services/cars-body.service';
 export class CarDistributorComponent implements OnInit {
 
   cars!: Car[];
-  body!: string;
 
   constructor(private route: ActivatedRoute, private carsBodyService: CarsBodyService) { 
   }
@@ -21,8 +20,9 @@ export class CarDistributorComponent implements OnInit {
   }
 
   getCars() {
-    const routeParams = this.route.snapshot.paramMap;
-    this.body = String(routeParams.get('carBody'));
-    this.cars = this.carsBodyService.getCarsByBody(this.body);
+    this.route.paramMap.subscribe(params => {
+      let body = String(params.get('carBody'));
+      this.cars = this.carsBodyService.getCarsByBody(body);
+    })
   }
 }
