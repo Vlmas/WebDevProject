@@ -1,0 +1,32 @@
+.distr-container {
+    width: 70%;
+    display: block;
+    margin: 50px auto 80px auto;
+    border: 2px dashed gray;
+}
+
+.d-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.models-by-body {
+    margin: 20px;
+}
+
+.models-by-body p {
+    font-size: smaller;
+    letter-spacing: 1px;
+}
+
+.models-by-body h3 {
+    letter-spacing: 3px;
+}
+
+.models-by-body img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 400ms;
+}

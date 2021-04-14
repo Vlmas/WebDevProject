@@ -21,6 +21,7 @@ img:hover, p:hover {
 
 p:hover {
     opacity: 0.85;   
+    transition: 100ms;
 }
 
 .right-side {

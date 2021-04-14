@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { slowOnset } from 'src/app/animations';
 import { Car } from 'src/app/models/car-model';
 import { CarsBodyService } from 'src/app/services/cars-body.service';
 
 @Component({
   selector: 'app-car-distributor',
   templateUrl: './car-distributor.component.html',
-  styleUrls: ['./car-distributor.component.css']
+  styleUrls: ['./car-distributor.component.css'],
+  animations: [
+    slowOnset
+  ]
 })
 export class CarDistributorComponent implements OnInit {
 

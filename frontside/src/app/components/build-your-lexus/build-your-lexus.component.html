@@ -1,4 +1,4 @@
-<div class="build-your-lexus-container">
+<div @tr class="build-your-lexus-container">
     <div class="title">
         <h1>SELECT A MODEL TO BUILD</h1>
         <h2>WE'LL MATCH YOU UP WITH A LEXUS YOU'LL LOVE</h2>
@@ -6,7 +6,7 @@
     <h1 class="body">HYBRIDS</h1>
     <div class="cars-gallery">
         <div *ngFor="let car of cars" class="car-detail">
-            <img src="{{car.assetUrls}}" alt="">
+            <img [src]="car.assetUrls[0]">
             <div class="space-between">
                 <div>
                     <p class="car-model">{{car.modelName}}</p>

@@ -107,7 +107,7 @@ export const CARS: Car[] = [
         id: 1,
         modelName: 'IS',
         body: 'sedan',
-        assetUrls: ['../../../assets/images/IS.png', '../../../assets/images/mainpagephoto.jpg'],
+        assetUrls: ['../../../assets/images/IS.png', '../../../assets/images/IS-STATE.jpg'],
         startingPrice: 39000,
         engine: [ENGINES[4], ENGINES[7]],
         gearBox: [GEARBOXES[1], GEARBOXES[3]],

@@ -50,12 +50,6 @@ button:focus, img:focus, p:focus {
 .expl-btn:hover {
     background-color: #0000;
     color: #fff;
-    /* width: 230px;
-    height: 60px;
-    bottom: 5%;
-    letter-spacing: 2px; */
-    /* color: goldenrod; */
-    /* color:mediumblue; */
 }
 
 .shopping-tools {
@@ -88,12 +82,12 @@ button:focus, img:focus, p:focus {
     font-size: 11px;
     font-weight: bold;
     color: #242424;
+    transition: 150ms;
 }
 
 .st-item:hover {
     opacity: 0.85;
     cursor: pointer;
-    transition: 150ms;
 }
 
 .st-item img {
@@ -114,6 +108,7 @@ button:focus, img:focus, p:focus {
     display: flex;
     justify-content: space-around;
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 .vo-title {
@@ -158,12 +153,13 @@ button:focus, img:focus, p:focus {
     width: 98%;
     margin: 0 auto 45px auto;
     padding-bottom: 45px;
-    border-bottom: 1px solid #d4d2d2;
+    /* border-bottom: 1px solid #d4d2d2; */
 }
 
 .d-assets {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .d-ls, .d-ux, .d-nx {

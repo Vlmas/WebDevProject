@@ -14,8 +14,6 @@ export class CarsService {
   }
 
   getCar(modelName: string) {
-    let idx = CARS.findIndex(p => p.modelName === modelName);
-    console.log(CARS[idx]);
-    return CARS[idx];
+    return CARS[CARS.findIndex(p => p.modelName === modelName)];
   }
 }
