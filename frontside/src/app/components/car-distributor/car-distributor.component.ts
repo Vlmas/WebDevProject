@@ -15,6 +15,7 @@ import { CarsBodyService } from 'src/app/services/cars-body.service';
 export class CarDistributorComponent implements OnInit {
 
   cars!: Car[];
+  title!: string;
 
   constructor(private route: ActivatedRoute, private carsBodyService: CarsBodyService) { 
   }
@@ -27,6 +28,7 @@ export class CarDistributorComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       let body = String(params.get('carBody'));
       this.cars = this.carsBodyService.getCarsByBody(body);
+      this.title = (this.cars[0].body === 'performance') ? this.cars[0].body.toUpperCase() : this.cars[0].body?.toUpperCase() + 'S';
     })
   }
 }
