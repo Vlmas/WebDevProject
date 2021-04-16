@@ -186,12 +186,12 @@ button:focus, img:focus, p:focus {
     color: #242424;
     cursor: pointer;
     border: 2px solid #fff;
+    transition: 150ms;
 }
 
 .d-design button:hover {
     background-color: #0000;
     color: #fff;
-    transition: 150ms;
 }
 
 .d-design {
