@@ -120,7 +120,7 @@ export const CARS: Car[] = [
         assetUrls: ['../../../assets/images/ES.png', '../../../assets/images/ES-STATE.jpg'],
         startingPrice: 40000,
         engine: [ENGINES[4], ENGINES[5], ENGINES[8]],
-        gearBox: GEARBOXES[1],
+        gearBox: [GEARBOXES[1]],
         dimensions: [4970, 1850, 1420]
     },
     {
@@ -129,7 +129,7 @@ export const CARS: Car[] = [
         body: 'sedan',
         assetUrls: ['../../../assets/images/LS.png', '../../../assets/images/LS-STATE.jpg'],
         startingPrice: 76000,
-        engine: ENGINES[0],
+        engine: [ENGINES[0]],
         gearBox: [GEARBOXES[0], GEARBOXES[1]],
         dimensions: [5230, 1880, 1450]
     },
@@ -139,8 +139,8 @@ export const CARS: Car[] = [
         body: 'suv',
         assetUrls: ['../../../assets/images/UX.png', '../../../assets/images/UX-STATE.jpg'],
         startingPrice: 33000,
-        engine: ENGINES[8],
-        gearBox: GEARBOXES[0],
+        engine: [ENGINES[8]],
+        gearBox: [GEARBOXES[0]],
         dimensions: [4500, 1830, 1520]
     },
     {
@@ -149,8 +149,8 @@ export const CARS: Car[] = [
         body: 'suv',
         assetUrls: ['../../../assets/images/NX.png', '../../../assets/images/NX-STATE.jpg'],
         startingPrice: 37610,
-        engine: ENGINES[7],
-        gearBox: GEARBOXES[3],
+        engine: [ENGINES[7]],
+        gearBox: [GEARBOXES[3]],
         dimensions: [4630, 1850, 1630]
     },
     {
@@ -159,8 +159,8 @@ export const CARS: Car[] = [
         body: 'suv',
         assetUrls: ['../../../assets/images/RX.png', '../../../assets/images/RX-STATE.jpg'],
         startingPrice: 45170,
-        engine: ENGINES[4],
-        gearBox: GEARBOXES[1],
+        engine: [ENGINES[4]],
+        gearBox: [GEARBOXES[1]],
         dimensions: [4880, 1880, 1700]
     },
     {
@@ -169,8 +169,8 @@ export const CARS: Car[] = [
         body: 'suv',
         assetUrls: ['../../../assets/images/GX.png', '../../../assets/images/GX-STATE.jpg'],
         startingPrice: 53250,
-        engine: ENGINES[3],
-        gearBox: GEARBOXES[3],
+        engine: [ENGINES[3]],
+        gearBox: [GEARBOXES[3]],
         dimensions: [4880, 1880, 1880]
     },
     {
@@ -179,8 +179,8 @@ export const CARS: Car[] = [
         body: 'suv',
         assetUrls: ['../../../assets/images/LX.png', '../../../assets/images/LX-STATE.jpg'],
         startingPrice: 86730,
-        engine: ENGINES[2],
-        gearBox: GEARBOXES[1],
+        engine: [ENGINES[2]],
+        gearBox: [GEARBOXES[1]],
         dimensions: [5080, 1980, 1900]
     },
     {
@@ -190,7 +190,7 @@ export const CARS: Car[] = [
         assetUrls: ['../../../assets/images/RC.png', '../../../assets/images/RC-STATE.jpg'],
         startingPrice: 42220,
         engine: [ENGINES[4], ENGINES[7]],
-        gearBox: GEARBOXES[1],
+        gearBox: [GEARBOXES[1]],
         dimensions: [4700, 1830, 1390]
     },
     {
@@ -199,8 +199,8 @@ export const CARS: Car[] = [
         body: 'coupe',
         assetUrls: ['../../../assets/images/LC.png', '../../../assets/images/LC-STATE.jpg'],
         startingPrice: 93050,
-        engine: ENGINES[1],
-        gearBox: GEARBOXES[0],
+        engine: [ENGINES[1]],
+        gearBox: [GEARBOXES[0]],
         dimensions: [4750, 1900, 1350]
     },
     {
@@ -209,8 +209,8 @@ export const CARS: Car[] = [
         body: 'hybrid',
         assetUrls: ['../../../assets/images/UX-H.png', '../../../assets/images/UX-STATE.jpg'],
         startingPrice: 35200,
-        engine: ENGINES[8],
-        gearBox: GEARBOXES[4],
+        engine: [ENGINES[8]],
+        gearBox: [GEARBOXES[4]],
         dimensions: [4500, 1830, 1520]
     },
     {
@@ -219,8 +219,8 @@ export const CARS: Car[] = [
         body: 'hybrid',
         assetUrls: ['../../../assets/images/NX-HYBRID.png', '../../../assets/images/NX-STATE.jpg'],
         startingPrice: 40160,
-        engine: ENGINES[7],
-        gearBox: GEARBOXES[4],
+        engine: [ENGINES[7]],
+        gearBox: [GEARBOXES[4]],
         dimensions: [4630, 1850, 1630]
     },
     {
@@ -230,7 +230,7 @@ export const CARS: Car[] = [
         assetUrls: ['../../../assets/images/ES-HYBRID.png', '../../../assets/images/ES-STATE.jpg'],
         startingPrice: 41910,
         engine: [ENGINES[4], ENGINES[5]],
-        gearBox: GEARBOXES[4],
+        gearBox: [GEARBOXES[4]],
         dimensions: [4970, 1850, 1420]
     },
     {
@@ -239,8 +239,8 @@ export const CARS: Car[] = [
         body: 'performance',
         assetUrls: ['../../../assets/images/RCF.png', '../../../assets/images/RC-STATE.jpg'],
         startingPrice: 65975,
-        engine: ENGINES[1],
-        gearBox: GEARBOXES[0],
+        engine: [ENGINES[1]],
+        gearBox: [GEARBOXES[0]],
         dimensions: [4700, 1830, 1390]
     },
     {
@@ -249,8 +249,8 @@ export const CARS: Car[] = [
         body: 'performance',
         assetUrls: ['../../../assets/images/LC.png', '../../../assets/images/LC-STATE.jpg'],
         startingPrice: 93050,
-        engine: ENGINES[1],
-        gearBox: GEARBOXES[0],
+        engine: [ENGINES[1]],
+        gearBox: [GEARBOXES[0]],
         dimensions: [4750, 1900, 1350]
     }
 ]

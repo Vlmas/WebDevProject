@@ -1,17 +1,48 @@
 <div @tr class="car-container">
-    <div class="showcase-video">
+    <div class="showcase">
         <img [src]="car.assetUrls[1]" width="100%">
+        <p class="model">THE 2021 {{car.modelName}}</p>
+        <p class="price">STARTING AT ${{car.startingPrice}}</p>
+        <button class="expl-btn" (click)="swapFlag()">EXPLORE</button>
+    </div>    
 
-        <div class="descr">
-            <p class="year">THE 2021</p>
-            <p class="superfat">{{car.modelName}}</p>
-            <p class="small">STARTING AT</p>
-            <p class="medium">${{car.startingPrice}}</p>
+    <div *ngIf="flag" @tr>
+        <div class="eng-gear">
+            <p class="hdr-logo">ENGINES & GEARBOXES</p>
+
+            <p class="desc">Available Engines: 
+                <a *ngFor="let engine of car.engine">
+                    {{engine.volume}} liter {{engine.configuration}} with {{engine.power}} brake horse powers,
+                </a>
+            </p>
+
+            <p class="desc">Available Gearboxes: 
+                <a *ngFor="let gearbox of car.gearBox">
+                    {{gearbox.gearCount}} speed {{gearbox.type}},
+                </a>
+            </p>
         </div>
-    </div>
 
-    <div class="details">
-        <p>EXPLORE</p>
-        
+        <div class="dim">
+            <p class="hdr-logo">DIMENSIONS</p>
+
+            <table class="dim-content">
+                <thead>
+                    <tr>
+                        <th>LENGTH</th>
+                        <th>WIDTH</th>
+                        <th>HEIGHT</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>{{car.dimensions[0]}}</td>
+                        <td>{{car.dimensions[1]}}</td>
+                        <td>{{car.dimensions[2]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>

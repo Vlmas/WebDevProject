@@ -14,6 +14,6 @@ export class CarsService {
   }
 
   getCar(modelName: string) {
-    return CARS[CARS.findIndex(p => p.modelName === modelName)];
+    return CARS[CARS.findIndex(p => p.modelName === modelName)] as Car;
   }
 }

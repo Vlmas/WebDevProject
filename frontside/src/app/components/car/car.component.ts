@@ -15,6 +15,7 @@ import { CarsService } from 'src/app/services/cars.service';
 export class CarComponent implements OnInit {
 
   car!: Car;
+  flag: boolean = false;
 
   constructor(private route: ActivatedRoute, private carsService: CarsService) { }
 
@@ -27,5 +28,9 @@ export class CarComponent implements OnInit {
       let modelName = String(params.get('carId'));
       this.car = this.carsService.getCar(modelName);
     })
+  }
+
+  swapFlag() {
+    this.flag = !this.flag;
   }
 }
