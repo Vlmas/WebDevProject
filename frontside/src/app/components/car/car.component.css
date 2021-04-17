@@ -34,18 +34,21 @@
     top: 15%;
 }
 
-.expl-btn {
+.expl-btn-d {
     bottom: 7%;
     height: 50px;
     width: 220px;
     font-weight: bold;
     font-size: 15px;
     letter-spacing: 1px;
-    background-color: #fff;
-    color: #242424;
     cursor: pointer;
     transition: 150ms;
     border: 2px solid #fff;
+}
+
+.expl-btn {
+    background-color: #fff;
+    color: #242424;
 }
 
 .expl-btn:hover {

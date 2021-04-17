@@ -3,7 +3,7 @@
         <img [src]="car.assetUrls[1]" width="100%">
         <p class="model">THE 2021 {{car.modelName}}</p>
         <p class="price">STARTING AT ${{car.startingPrice}}</p>
-        <button class="expl-btn" (click)="swapFlag()">EXPLORE</button>
+        <button #btn class="expl-btn expl-btn-d" (click)="swapFlag()">EXPLORE</button>
     </div>    
 
     <div *ngIf="flag" @tr>

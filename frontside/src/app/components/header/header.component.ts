@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +8,15 @@ import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  searchingText!: string;
   headerFlag: boolean = true;
   mobile: boolean = false;
 
-  constructor(private searchBar: ElementRef, private renderer: Renderer2) { }
+  constructor(private searchBar: ElementRef, private router: Router) { }
 
   ngOnInit(): void { }
   
-  search(): void {
+  showSearch(): void {
     let elem = this.searchBar.nativeElement.querySelector(".header-container .search-box");
     elem.classList.toggle("search-active");
   }
@@ -26,5 +28,9 @@ export class HeaderComponent implements OnInit {
 
   refresh() {
     window.location.reload();
+  }
+
+  search() {
+    this.router.navigateByUrl('/search/' + String(this.searchingText));
   }
 }

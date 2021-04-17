@@ -2,6 +2,14 @@ import { Car } from "./models/car-model";
 import { ConceptCar } from "./models/concept-car-model";
 import { Engine } from "./models/engine-model";
 import { Gearbox } from "./models/gearbox-model";
+import { Url } from "./models/url-model";
+
+export const URLS: Url[] = [
+    {
+        name: 'Suvs',
+        url: 'http://localhost:4200/cars/suv'
+    }
+]
 
 export const ENGINES: Engine[] = [
     {

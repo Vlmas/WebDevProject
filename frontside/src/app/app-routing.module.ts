@@ -10,6 +10,7 @@ import { LCertifiedComponent } from './components/l-certified/l-certified.compon
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { OwnersComponent } from './components/owners/owners.component';
+import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   {path: '', component: MainPageComponent}, 
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'dive-into-lexus', component: DiveIntoLexusComponent},
   {path: 'cars/:carBody', component: CarDistributorComponent},
   {path: 'models/:carId', component: CarComponent},
+  {path: 'search/:pattern', component: SearchComponent},
   {path: '**', component: NotFoundComponent}
 ];
 

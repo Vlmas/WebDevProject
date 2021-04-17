@@ -16,7 +16,7 @@
                 <p [routerLink]="['/owners']">Owners</p>
                 <p [routerLink]="['/l-certified']">L/Certified</p>
                 <p [routerLink]="['/dealers']">Find A Dealer</p>
-                <img src="../../../assets/images/search.png" (click)="search()" width="30" height="30">
+                <img src="../../../assets/images/search.png" (click)="showSearch()" width="30" height="30">
             </div>
         </div>
 
@@ -33,13 +33,15 @@
     <div class="search-box">
         <img src="../../../assets/images/search.png" width="30" height="30">
 
-        <input type="text" class="search-input" placeholder="SEARCH">
+        <input type="text" class="search-input" placeholder="SEARCH" [(ngModel)]="searchingText" (keydown.enter)="search()">
+        
+        <p>{{searchingText}}</p>
 
-        <img src="../../../assets/images/cancel.png" (click)="search()" width="30" height="30">
+        <img src="../../../assets/images/cancel.png" (click)="showSearch()" width="30" height="30">
     </div>
 
     <div class="mobile">
-        <div class="mobile-search" (click)="search()">
+        <div class="mobile-search" (click)="showSearch()">
             <img src="../../../assets/images/search-white.png" width="25" height="25" style="margin: 0px">
             <p style="font-size:25px">SEARCH</p>
         </div>

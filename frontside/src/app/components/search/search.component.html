@@ -1,0 +1,9 @@
+<div class="search-container">
+    <h3>Found {{urls.length}} result(s) for {{pattern}}: </h3>
+    
+    <div class="urls-container">
+        <div *ngFor="let url of urls">
+            <a href="{{url.url}}">{{url.name}}</a>
+        </div>
+    </div>
+</div>

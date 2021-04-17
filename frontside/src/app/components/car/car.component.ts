@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { slowOnset } from 'src/app/animations';
 import { Car } from 'src/app/models/car-model';
@@ -17,7 +17,7 @@ export class CarComponent implements OnInit {
   car!: Car;
   flag: boolean = false;
 
-  constructor(private route: ActivatedRoute, private carsService: CarsService) { }
+  constructor(private route: ActivatedRoute, private carsService: CarsService, private element: ElementRef) { }
 
   ngOnInit(): void {
     this.getCar();

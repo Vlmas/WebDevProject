@@ -16,6 +16,8 @@ import { LCertifiedComponent } from './components/l-certified/l-certified.compon
 import { DiveIntoLexusComponent } from './components/dive-into-lexus/dive-into-lexus.component';
 import { CarComponent } from './components/car/car.component';
 import { CarDistributorComponent } from './components/car-distributor/car-distributor.component';
+import { SearchComponent } from './components/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,14 @@ import { CarDistributorComponent } from './components/car-distributor/car-distri
     LCertifiedComponent,
     DiveIntoLexusComponent,
     CarComponent,
-    CarDistributorComponent
+    CarDistributorComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
