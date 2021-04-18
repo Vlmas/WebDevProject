@@ -1,19 +1,24 @@
-<div @tr class="build-your-lexus-container">
-    <div class="title">
-        <h1>SELECT A MODEL TO BUILD</h1>
-        <h2>WE'LL MATCH YOU UP WITH A LEXUS YOU'LL LOVE</h2>
+<div class="build-lexus-container">
+    <div class="create-own">
+        <p>BUILD IT NOW</p>
+        <video autoplay loop width="100%">
+            <source src="../../../assets/videos/IS_Hero.mp4">
+        </video>
+
+        <button (click)="swapFlag()" class="expl-btn-d expl-btn">BUILD YOUR LEXUS</button>
     </div>
-    <h1 class="body">HYBRIDS</h1>
-    <div class="cars-gallery">
-        <div *ngFor="let car of cars" class="car-detail">
-            <img [src]="car.assetUrls[0]">
-            <div class="space-between">
-                <div>
-                    <p class="car-model">{{car.modelName}}</p>
-                    <p class="car-starting-price">STARTING AT ${{car.startingPrice}}*</p>
-                </div>
-                <button class="build-button">BUILD YOURS</button>
-            </div>
-        </div>
+
+    <div @tr *ngIf="flag" class="inputs">
+        <input type="text" placeholder="MODEL NAME" class="details-in" name="" [(ngModel)]="modelName">
+
+        <input type="text" placeholder="BODY TYPE" class="details-in" name="" [(ngModel)]="body">
+
+        <input type="text" placeholder="STARTING PRISE" class="details-in" name="" [(ngModel)]="startingPrise">
+
+        <input type="text" placeholder="EXISTING ENGINE ID" class="details-in" name="" [(ngModel)]="engineId">
+
+        <input type="text" placeholder="EXISTING GEARBOX ID" class="details-in" name="" [(ngModel)]="gearboxId">
+
+        <button class="build" (click)="buildCar()">BUILD</button>
     </div>
 </div>

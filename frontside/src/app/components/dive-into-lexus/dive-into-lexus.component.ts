@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { slowOnset } from 'src/app/animations';
+import { Car } from 'src/app/models/car-model';
+import { CarsService } from 'src/app/services/cars.service';
 
 @Component({
   selector: 'app-dive-into-lexus',
@@ -11,9 +13,15 @@ import { slowOnset } from 'src/app/animations';
 })
 export class DiveIntoLexusComponent implements OnInit {
 
-  constructor() { }
+  cars!: Car[];
+  constructor(private carsService: CarsService) { 
+    this.getCars();
+  }
 
   ngOnInit(): void {
   }
 
+  getCars(): void {
+    this.cars = this.carsService.getCars();
+  }
 }
