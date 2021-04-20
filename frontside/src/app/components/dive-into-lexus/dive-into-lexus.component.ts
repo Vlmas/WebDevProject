@@ -14,6 +14,7 @@ import { CarsService } from 'src/app/services/cars.service';
 export class DiveIntoLexusComponent implements OnInit {
 
   cars!: Car[];
+  
   constructor(private carsService: CarsService) { 
     this.getCars();
   }
