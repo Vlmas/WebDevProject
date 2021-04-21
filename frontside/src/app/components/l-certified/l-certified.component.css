@@ -1,0 +1,150 @@
+/*1------------------ box*/
+.box-1 {
+    display: grid;
+    gap: 50px;
+    margin: 55px;
+}
+
+.minibox1 {
+    margin-left: 34px;
+    max-width: 300px;
+    min-height: 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    grid-column: 1/2;
+    text-align: center;
+}
+
+.minibox1 h5,.minibox1 p,.minibox1 h3 {
+    margin-top: 10%;
+}
+
+.minibox1 p {
+    font-size: 30px;
+}
+
+.minibox2 {
+    margin-left: 34px;
+    max-width: 300px;
+    min-height: 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.minibox2 h5,.minibox2 p,.minibox2 h3 {
+    margin-top: 10%;    
+}
+
+.minibox2 p {
+    font-size: 30px;
+}
+
+.minibox3 {
+    margin-left: 34px;
+    max-width: 300px;
+    min-height: 350px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    grid-column: 3/4;
+    text-align: center;
+}
+
+.minibox3 h5,.minibox3 p,.minibox3 h3 {
+    margin-top: 10%;
+}
+
+.minibox3 p {
+    font-size: 30px;
+}
+
+.box-search {
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    min-height: 50px;
+    min-width: 200px;
+    font: 15px bold ;
+    border:3px solid black;
+    color: black;
+    background-color: white;
+    margin:20px;
+}
+
+/*------------------------------------------------*/
+
+.box-2 {
+    width: 70%;
+    margin-left: 15%;
+    font-size: 13px;
+}
+
+.minibox2-1 {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 13px;
+    font-style: oblique;
+}
+
+.minibox2-1 p {
+    margin-top: 10px;
+}
+
+.minibox2-2 {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 34% 34% 34%;
+}
+
+.minibox2-2-1 {
+    text-align: center;
+    margin: 25px 20px 40px 0px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 13px;
+    font-style: oblique;
+}
+
+/*box---------3*/
+
+.box-4 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.box-4 h3 {
+    margin-bottom: 30px;
+}
+
+/*BOX-----5*/
+
+.box-5 {
+    margin-top: 100px;
+    width: 70%;
+    margin-left: 15%;
+    font-size: 15px;
+}
+
+.minibox5-1 {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: normal;
+    font-size: 14px;
+    font-style: oblique;
+}
+
+.box-6 {
+    margin-top: 100px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns:16% 16% 16% 16% 16% 16%;
+}
+
+.minibox6-2-1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+}

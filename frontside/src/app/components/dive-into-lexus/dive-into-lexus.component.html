@@ -5,7 +5,7 @@
     </div>
     <div class="cars-gallery">
         <div *ngFor="let car of cars" class="car-detail"  routerLink="/models/{{car.modelName}}">
-            <img [src]="car.assetUrls[0]">
+            <img [src]="car.photoForList">
             <div class="space-between">
                 <div>
                     <p class="car-model">{{car.modelName}}</p>

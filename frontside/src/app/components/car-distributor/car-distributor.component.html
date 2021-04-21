@@ -4,7 +4,7 @@
     <div @tr class="distr-container">
         <div class="d-box">
             <div *ngFor="let car of cars" class="models-by-body">
-                <img [routerLink]="['/models/', car.modelName]" [src]="car.assetUrls[0]">
+                <img [routerLink]="['/models/', car.modelName]" [src]="car.photoForList">
                 <h3>{{car.modelName}}</h3>
                 <p>STARTING AT ${{car.startingPrice}}</p>
             </div>

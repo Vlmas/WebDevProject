@@ -16,6 +16,7 @@ export class CarComponent implements OnInit {
 
   car!: Car;
   flag: boolean = false;
+  dimensions!: string[];
 
   constructor(private route: ActivatedRoute, private carsService: CarsService, private element: ElementRef) { }
 
@@ -27,6 +28,7 @@ export class CarComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       let modelName = String(params.get('carId'));
       this.car = this.carsService.getCar(modelName);
+      this.dimensions = this.car.dimensions.split(',');
     })
   }
 

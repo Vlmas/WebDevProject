@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { slowOnset } from 'src/app/animations';
 import { Car } from 'src/app/models/car-model';
 import { CarsService } from 'src/app/services/cars.service';
@@ -21,7 +22,7 @@ export class BuildYourLexusComponent implements OnInit {
   engineId!: number;
   gearboxId!: number;
 
-  constructor(private carsService: CarsService) { }
+  constructor(private carsService: CarsService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -31,17 +32,22 @@ export class BuildYourLexusComponent implements OnInit {
       id: this.carsService.getCars().length + 1,
       modelName: this.modelName,
       body: this.body,
-      assetUrls: ['../../../assets/images/default-lexus.png', '../../../assets/images/mainpagephoto.jpg'],
+      photoForList: '../../../assets/images/default-lexus.png',
+      photoForShow: '../../../assets/images/mainpagephoto.jpg',
       startingPrice: Number(this.startingPrise),
       engine: this.carsService.getCarEngine(Number(this.engineId)),
       gearBox: this.carsService.getCarGearbox(Number(this.gearboxId)),
-      dimensions: [4700, 1800, 1450]
+      dimensions: '4700,1800,1450'
     }
-
     this.carsService.addCar(this.car);
   }
 
   swapFlag() {
-    this.flag = !this.flag;
+    const token = localStorage.getItem('token');
+    if(token) {
+      this.flag = !this.flag;
+    } else {
+      this.router.navigate(['/login']);
+    }
   }
 }

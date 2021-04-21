@@ -6,6 +6,37 @@ import { Url } from "./models/url-model";
 
 export const URLS: Url[] = [
     {
+        id: 1,
+        name: 'suvs',
+        url: 'http://localhost:4200/cars/suv'
+    },
+    {
+        id: 1,
+        name: 'sedans',
+        url: 'http://localhost:4200/cars/sedans'
+    },
+    {
+        id: 1,
+        name: 'Suvs',
+        url: 'http://localhost:4200/cars/suv'
+    },
+    {
+        id: 1,
+        name: 'Suvs',
+        url: 'http://localhost:4200/cars/suv'
+    },
+    {
+        id: 1,
+        name: 'Suvs',
+        url: 'http://localhost:4200/cars/suv'
+    },
+    {
+        id: 1,
+        name: 'Suvs',
+        url: 'http://localhost:4200/cars/suv'
+    },
+    {
+        id: 1,
         name: 'Suvs',
         url: 'http://localhost:4200/cars/suv'
     }
@@ -115,151 +146,166 @@ export const CARS: Car[] = [
         id: 1,
         modelName: 'IS',
         body: 'sedan',
-        assetUrls: ['../../../assets/images/IS.png', '../../../assets/images/IS-STATE.jpg'],
+        photoForList: '../../../assets/images/IS.png',
+        photoForShow: '../../../assets/images/IS-STATE.jpg',
         startingPrice: 39000,
-        engine: [ENGINES[4], ENGINES[7]],
-        gearBox: [GEARBOXES[1], GEARBOXES[3]],
-        dimensions: [4710, 1840, 1430]
+        engine: ENGINES[4],
+        gearBox: GEARBOXES[1],
+        dimensions: '4710,1840,1430'
     },
     {
         id: 2,
         modelName: 'ES',
         body: 'sedan',
-        assetUrls: ['../../../assets/images/ES.png', '../../../assets/images/ES-STATE.jpg'],
+        photoForList: '../../../assets/images/ES.png',
+        photoForShow: '../../../assets/images/ES-STATE.jpg',
         startingPrice: 40000,
-        engine: [ENGINES[4], ENGINES[5], ENGINES[8]],
-        gearBox: [GEARBOXES[1]],
-        dimensions: [4970, 1850, 1420]
+        engine: ENGINES[4],
+        gearBox: GEARBOXES[1],
+        dimensions: '4970,1850,1420'
     },
     {
         id: 3,
         modelName: 'LS',
         body: 'sedan',
-        assetUrls: ['../../../assets/images/LS.png', '../../../assets/images/LS-STATE.jpg'],
+        photoForList: '../../../assets/images/LS.png',
+        photoForShow: '../../../assets/images/LS-STATE.jpg',
         startingPrice: 76000,
-        engine: [ENGINES[0]],
-        gearBox: [GEARBOXES[0], GEARBOXES[1]],
-        dimensions: [5230, 1880, 1450]
+        engine: ENGINES[0],
+        gearBox: GEARBOXES[0],
+        dimensions: '5230,1880,1450'
     },
     {
         id: 4,
         modelName: 'UX',
         body: 'suv',
-        assetUrls: ['../../../assets/images/UX.png', '../../../assets/images/UX-STATE.jpg'],
+        photoForList: '../../../assets/images/UX.png',
+        photoForShow: '../../../assets/images/UX-STATE.jpg',
         startingPrice: 33000,
-        engine: [ENGINES[8]],
-        gearBox: [GEARBOXES[0]],
-        dimensions: [4500, 1830, 1520]
+        engine: ENGINES[8],
+        gearBox: GEARBOXES[0],
+        dimensions: '4500,1830,1520'
     },
     {
         id: 5,
         modelName: 'NX',
         body: 'suv',
-        assetUrls: ['../../../assets/images/NX.png', '../../../assets/images/NX-STATE.jpg'],
+        photoForList: '../../../assets/images/NX.png',
+        photoForShow: '../../../assets/images/NX-STATE.jpg',
         startingPrice: 37610,
-        engine: [ENGINES[7]],
-        gearBox: [GEARBOXES[3]],
-        dimensions: [4630, 1850, 1630]
+        engine: ENGINES[7],
+        gearBox: GEARBOXES[3],
+        dimensions: '4630,1850,1630'
     },
     {
         id: 6,
         modelName: 'RX',
         body: 'suv',
-        assetUrls: ['../../../assets/images/RX.png', '../../../assets/images/RX-STATE.jpg'],
+        photoForList: '../../../assets/images/RX.png',
+        photoForShow: '../../../assets/images/RX-STATE.jpg',
         startingPrice: 45170,
-        engine: [ENGINES[4]],
-        gearBox: [GEARBOXES[1]],
-        dimensions: [4880, 1880, 1700]
+        engine: ENGINES[4],
+        gearBox: GEARBOXES[1],
+        dimensions: '4880,1880,1700'
     },
     {
         id: 7,
         modelName: 'GX',
         body: 'suv',
-        assetUrls: ['../../../assets/images/GX.png', '../../../assets/images/GX-STATE.jpg'],
+        photoForList: '../../../assets/images/GX.png',
+        photoForShow: '../../../assets/images/GX-STATE.jpg',
         startingPrice: 53250,
-        engine: [ENGINES[3]],
-        gearBox: [GEARBOXES[3]],
-        dimensions: [4880, 1880, 1880]
+        engine: ENGINES[3],
+        gearBox: GEARBOXES[3],
+        dimensions: '4880,1880,1880'
     },
     {
         id: 8,
         modelName: 'LX',
         body: 'suv',
-        assetUrls: ['../../../assets/images/LX.png', '../../../assets/images/LX-STATE.jpg'],
+        photoForList: '../../../assets/images/LX.png',
+        photoForShow: '../../../assets/images/LX-STATE.jpg',
         startingPrice: 86730,
-        engine: [ENGINES[2]],
-        gearBox: [GEARBOXES[1]],
-        dimensions: [5080, 1980, 1900]
+        engine: ENGINES[2],
+        gearBox: GEARBOXES[1],
+        dimensions: '5080,1980,1900'
     },
     {
         id: 9,
         modelName: 'RC',
         body: 'coupe',
-        assetUrls: ['../../../assets/images/RC.png', '../../../assets/images/RC-STATE.jpg'],
+        photoForList: '../../../assets/images/RC.png',
+        photoForShow: '../../../assets/images/RC-STATE.jpg',
         startingPrice: 42220,
-        engine: [ENGINES[4], ENGINES[7]],
-        gearBox: [GEARBOXES[1]],
-        dimensions: [4700, 1830, 1390]
+        engine: ENGINES[4],
+        gearBox: GEARBOXES[1],
+        dimensions: '4700,1830,1390'
     },
     {
         id: 10,
         modelName: 'LC',
         body: 'coupe',
-        assetUrls: ['../../../assets/images/LC.png', '../../../assets/images/LC-STATE.jpg'],
+        photoForList: '../../../assets/images/LC.png',
+        photoForShow: '../../../assets/images/LC-STATE.jpg',
         startingPrice: 93050,
-        engine: [ENGINES[1]],
-        gearBox: [GEARBOXES[0]],
-        dimensions: [4750, 1900, 1350]
+        engine: ENGINES[1],
+        gearBox: GEARBOXES[0],
+        dimensions: '4750,1900,1350'
     },
     {
         id: 11,
         modelName: 'UX-HYBRID',
         body: 'hybrid',
-        assetUrls: ['../../../assets/images/UX-H.png', '../../../assets/images/UX-STATE.jpg'],
+        photoForList: '../../../assets/images/UX-H.png',
+        photoForShow: '../../../assets/images/UX-STATE.jpg',
         startingPrice: 35200,
-        engine: [ENGINES[8]],
-        gearBox: [GEARBOXES[4]],
-        dimensions: [4500, 1830, 1520]
+        engine: ENGINES[8],
+        gearBox: GEARBOXES[4],
+        dimensions: '4500,1830,1520'
     },
     {
         id: 12,
         modelName: 'NX-HYBRID',
         body: 'hybrid',
-        assetUrls: ['../../../assets/images/NX-HYBRID.png', '../../../assets/images/NX-STATE.jpg'],
+        photoForList: '../../../assets/images/NX-HYBRID.png',
+        photoForShow: '../../../assets/images/NX-STATE.jpg',
         startingPrice: 40160,
-        engine: [ENGINES[7]],
-        gearBox: [GEARBOXES[4]],
-        dimensions: [4630, 1850, 1630]
+        engine: ENGINES[7],
+        gearBox: GEARBOXES[4],
+        dimensions: '4630,1850,1630'
     },
     {
         id: 13,
         modelName: 'ES-HYBRID',
         body: 'hybrid',
-        assetUrls: ['../../../assets/images/ES-HYBRID.png', '../../../assets/images/ES-STATE.jpg'],
+        photoForList: '../../../assets/images/ES-HYBRID.png',
+        photoForShow: '../../../assets/images/ES-STATE.jpg',
         startingPrice: 41910,
-        engine: [ENGINES[4], ENGINES[5]],
-        gearBox: [GEARBOXES[4]],
-        dimensions: [4970, 1850, 1420]
+        engine: ENGINES[4],
+        gearBox: GEARBOXES[4],
+        dimensions: '4970,1850,1420'
     },
     {
         id: 14,
         modelName: 'RC F',
         body: 'performance',
-        assetUrls: ['../../../assets/images/RCF.png', '../../../assets/images/RC-STATE.jpg'],
+        photoForList: '../../../assets/images/RCF.png',
+        photoForShow: '../../../assets/images/RC-STATE.jpg',
         startingPrice: 65975,
-        engine: [ENGINES[1]],
-        gearBox: [GEARBOXES[0]],
-        dimensions: [4700, 1830, 1390]
+        engine: ENGINES[1],
+        gearBox: GEARBOXES[0],
+        dimensions: '4700,1830,1390'
     },
     {
         id: 15,
         modelName: 'LC',
         body: 'performance',
-        assetUrls: ['../../../assets/images/LC.png', '../../../assets/images/LC-STATE.jpg'],
+        photoForList: '../../../assets/images/LC.png',
+        photoForShow: '../../../assets/images/LC-STATE.jpg',
         startingPrice: 93050,
-        engine: [ENGINES[1]],
-        gearBox: [GEARBOXES[0]],
-        dimensions: [4750, 1900, 1350]
+        engine: ENGINES[1],
+        gearBox: GEARBOXES[0],
+        dimensions: '4750,1900,1350'
     }
 ]
 
@@ -288,7 +334,7 @@ export const CONCEPT_CARS: ConceptCar[] = [
     {
         id: 4,
         name: 'LF-FC',
-        releaseDate: 'unknown',
+        releaseDate: 2025,
         description: 'The first‐ever Lexus fuel cell concept, the LF‐FC embodies the future of capacitive technology as it evokes an era of visionary, emotional design. A bracing balance of aggressive sculpting and flowing curves cloaks an otherworldly, intuitive interior that defies simple luxury. An advanced human interface operates controls via basic gestures, while automated driving technologies steer the flagship vehicle into a bold new world.',
         assetUrl: '../../../assets/images/LF-FC.jpg'
     }

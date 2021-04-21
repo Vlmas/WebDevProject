@@ -1,6 +1,6 @@
 <div @tr class="car-container">
     <div class="showcase">
-        <img [src]="car.assetUrls[1]" width="100%">
+        <img [src]="car.photoForShow" width="100%">
         <p class="model">THE 2021 {{car.modelName}}</p>
         <p class="price">STARTING AT ${{car.startingPrice}}</p>
         <button #btn class="expl-btn expl-btn-d" (click)="swapFlag()">EXPLORE</button>
@@ -10,16 +10,12 @@
         <div class="eng-gear">
             <p class="hdr-logo">ENGINES & GEARBOXES</p>
 
-            <p class="desc">Available Engines: 
-                <a *ngFor="let engine of car.engine">
-                    {{engine.volume}} liter {{engine.configuration}} with {{engine.power}} brake horse powers,
-                </a>
+            <p class="desc">Available Engine: 
+                {{car.engine.volume}} liter {{car.engine.configuration}} with {{car.engine.power}} brake horse powers
             </p>
 
-            <p class="desc">Available Gearboxes: 
-                <a *ngFor="let gearbox of car.gearBox">
-                    {{gearbox.gearCount}} speed {{gearbox.type}},
-                </a>
+            <p class="desc">Available Gearbox: 
+                {{car.gearBox.gearCount}} speed {{car.gearBox.type}}
             </p>
         </div>
 
@@ -37,9 +33,9 @@
 
                 <tbody>
                     <tr>
-                        <td>{{car.dimensions[0]}}</td>
-                        <td>{{car.dimensions[1]}}</td>
-                        <td>{{car.dimensions[2]}}</td>
+                        <td>{{dimensions[0]}}</td>
+                        <td>{{dimensions[1]}}</td>
+                        <td>{{dimensions[2]}}</td>
                     </tr>
                 </tbody>
             </table>

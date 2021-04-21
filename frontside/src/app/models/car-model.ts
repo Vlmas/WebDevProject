@@ -5,9 +5,10 @@ export interface Car {
     id: number, 
     modelName: string,
     body: string,
-    assetUrls: string | string[],
+    photoForList: string,
+    photoForShow: string,
     startingPrice: number,
-    engine: Engine[],
-    gearBox: Gearbox[]
-    dimensions: number[]
+    engine: Engine,
+    gearBox: Gearbox
+    dimensions: string
 }

@@ -24,10 +24,10 @@ export class CarsService {
   }
 
   getCarEngine(id: number) {
-    return ENGINES.filter(p => p.id === id) as Engine[];
+    return ENGINES.find(p => p.id === id) as Engine;
   }
 
   getCarGearbox(id: number) {
-    return GEARBOXES.filter(p => p.id === id) as Gearbox[];
+    return GEARBOXES.find(p => p.id === id) as Gearbox;
   }
 }

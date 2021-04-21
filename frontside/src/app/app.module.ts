@@ -18,6 +18,9 @@ import { CarComponent } from './components/car/car.component';
 import { CarDistributorComponent } from './components/car-distributor/car-distributor.component';
 import { SearchComponent } from './components/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { AuthInterceptor } from './AuthInterceptor';
 
 @NgModule({
   declarations: [
@@ -34,15 +37,23 @@ import { FormsModule } from '@angular/forms';
     DiveIntoLexusComponent,
     CarComponent,
     CarDistributorComponent,
-    SearchComponent
+    SearchComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
