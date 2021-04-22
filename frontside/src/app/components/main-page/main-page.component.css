@@ -57,7 +57,7 @@ button:focus, img:focus, p:focus {
     text-align: center;
     width: 98%;
     padding-bottom: 45px;
-    border-bottom: 1px solid #d4d2d2;
+    border-bottom: 1px solid #bdbbbb;
 }
 
 .st-logo {
@@ -149,11 +149,10 @@ button:focus, img:focus, p:focus {
 
 .discover-lex {
     padding-top: 45px;
-    border-top: 1px solid #d4d2d2;
+    border-top: 1px solid #bdbbbb;
     width: 98%;
     margin: 0 auto 45px auto;
     padding-bottom: 45px;
-    /* border-bottom: 1px solid #d4d2d2; */
 }
 
 .d-assets {

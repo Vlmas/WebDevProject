@@ -1,0 +1,46 @@
+.concept-cars-container {
+    width: 98%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo {
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: x-large;
+    color: #2f2f2f;
+    margin-bottom: 40px;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #bdbbbb;
+}
+
+img {
+    border: 3px ridge #2f2f2f;
+}
+
+.c-name {
+    margin: 7px 0 12px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.c-descr {
+    width: 90%;
+    text-align: center;
+    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif;
+    font-size: 17px;
+    margin-bottom: 7px;
+}
+
+.c-date {
+    font-weight: bold;
+    letter-spacing: 2px;
+}

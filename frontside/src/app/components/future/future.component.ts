@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { slowOnset } from 'src/app/animations';
+import { ConceptCar } from 'src/app/models/concept-car-model';
+import { CarsService } from 'src/app/services/cars.service';
 
 @Component({
   selector: 'app-future',
@@ -11,9 +13,15 @@ import { slowOnset } from 'src/app/animations';
 })
 export class FutureComponent implements OnInit {
 
-  constructor() { }
+  conceptCars!: ConceptCar[];
+
+  constructor(private carsService: CarsService) { }
 
   ngOnInit(): void {
+    this.getConceptCars();
   }
 
+  getConceptCars() {
+    this.conceptCars = this.carsService.getConceptCars();
+  }
 }

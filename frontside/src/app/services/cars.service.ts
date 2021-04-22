@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CARS, ENGINES, GEARBOXES } from '../fake-db';
+import { CARS, CONCEPT_CARS, ENGINES, GEARBOXES } from '../fake-db';
 import { Car } from '../models/car-model';
 import { Engine } from '../models/engine-model';
 import { Gearbox } from '../models/gearbox-model';
@@ -29,5 +29,9 @@ export class CarsService {
 
   getCarGearbox(id: number) {
     return GEARBOXES.find(p => p.id === id) as Gearbox;
+  }
+
+  getConceptCars() {
+    return CONCEPT_CARS;
   }
 }

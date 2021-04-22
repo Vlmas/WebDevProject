@@ -8,10 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { BuildYourLexusComponent } from './components/build-your-lexus/build-your-lexus.component';
-import { DealersComponent } from './components/dealers/dealers.component';
 import { FutureComponent } from './components/future/future.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { OwnersComponent } from './components/owners/owners.component';
 import { LCertifiedComponent } from './components/l-certified/l-certified.component';
 import { DiveIntoLexusComponent } from './components/dive-into-lexus/dive-into-lexus.component';
 import { CarComponent } from './components/car/car.component';
@@ -29,10 +27,8 @@ import { AuthInterceptor } from './AuthInterceptor';
     FooterComponent,
     MainPageComponent,
     BuildYourLexusComponent,
-    DealersComponent,
     FutureComponent,
     NotFoundComponent,
-    OwnersComponent,
     LCertifiedComponent,
     DiveIntoLexusComponent,
     CarComponent,

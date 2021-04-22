@@ -11,34 +11,34 @@ export const URLS: Url[] = [
         url: 'http://localhost:4200/cars/suv'
     },
     {
-        id: 1,
+        id: 2,
         name: 'sedans',
-        url: 'http://localhost:4200/cars/sedans'
+        url: 'http://localhost:4200/cars/sedan'
     },
     {
-        id: 1,
-        name: 'Suvs',
-        url: 'http://localhost:4200/cars/suv'
+        id: 3,
+        name: 'coupes',
+        url: 'http://localhost:4200/cars/coupes'
     },
     {
-        id: 1,
-        name: 'Suvs',
-        url: 'http://localhost:4200/cars/suv'
+        id: 4,
+        name: 'hybrids',
+        url: 'http://localhost:4200/cars/hybrid'
     },
     {
-        id: 1,
-        name: 'Suvs',
-        url: 'http://localhost:4200/cars/suv'
+        id: 5,
+        name: 'performance',
+        url: 'http://localhost:4200/cars/performance'
     },
     {
-        id: 1,
-        name: 'Suvs',
-        url: 'http://localhost:4200/cars/suv'
+        id: 6,
+        name: 'future',
+        url: 'http://localhost:4200/future'
     },
     {
-        id: 1,
-        name: 'Suvs',
-        url: 'http://localhost:4200/cars/suv'
+        id: 7,
+        name: 'dive',
+        url: 'http://localhost:4200/dive-into-lexus'
     }
 ]
 

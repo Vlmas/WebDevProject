@@ -1,1 +1,12 @@
-<p>future works!</p>
+<div @tr class="concept-cars-container">
+    <div class="concept-cars">
+        <h3 class="logo">FUTURE OF THE LEXUS</h3>
+
+        <div class="show" *ngFor="let car of conceptCars">
+            <img [src]="car.assetUrl" width="600">
+            <p class="c-name">{{car.name}}</p>
+            <p class="c-descr">{{car.description}}</p>
+            <p class="c-date">COMING IN {{car.releaseDate}}</p>
+        </div>
+    </div>
+</div>

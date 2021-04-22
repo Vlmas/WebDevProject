@@ -1,20 +1,27 @@
-/*1------------------ box*/
+p, h3, h2 {
+    letter-spacing: 1px;
+}
+
 .box-1 {
     display: grid;
     gap: 50px;
     margin: 55px;
 }
 
+.b-font {
+    font-family: "Palatino", "Palatino Linotype", "Book Antiqua", serif;
+}
+
 .minibox1 {
     margin-left: 34px;
     max-width: 300px;
     min-height: 350px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     grid-column: 1/2;
     text-align: center;
 }
 
-.minibox1 h5,.minibox1 p,.minibox1 h3 {
+.minibox1 h5, .minibox1 p, .minibox1 h3 {
     margin-top: 10%;
 }
 
@@ -26,13 +33,13 @@
     margin-left: 34px;
     max-width: 300px;
     min-height: 350px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     grid-column: 2/3;
     text-align: center;
 }
 
-.minibox2 h5,.minibox2 p,.minibox2 h3 {
-    margin-top: 10%;    
+.minibox2 h5, .minibox2 p, .minibox2 h3 {
+    margin-top: 10%;
 }
 
 .minibox2 p {
@@ -43,12 +50,12 @@
     margin-left: 34px;
     max-width: 300px;
     min-height: 350px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     grid-column: 3/4;
     text-align: center;
 }
 
-.minibox3 h5,.minibox3 p,.minibox3 h3 {
+.minibox3 h5, .minibox3 p, .minibox3 h3 {
     margin-top: 10%;
 }
 
@@ -63,13 +70,21 @@
 }
 
 button {
-    min-height: 50px;
-    min-width: 200px;
-    font: 15px bold ;
-    border:3px solid black;
-    color: black;
-    background-color: white;
-    margin:20px;
+    height: 50px;
+    width: 220px;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition: 150ms;
+    border: 2px solid #000;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 /*------------------------------------------------*/
@@ -85,7 +100,6 @@ button {
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
     font-size: 13px;
-    font-style: oblique;
 }
 
 .minibox2-1 p {
@@ -104,7 +118,6 @@ button {
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
     font-size: 13px;
-    font-style: oblique;
 }
 
 /*box---------3*/
@@ -113,6 +126,14 @@ button {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.box-4 img {
+    transition: .3s;
+}
+
+.box-4 img:hover {
+    filter: brightness(50%);
 }
 
 .box-4 h3 {
@@ -133,18 +154,19 @@ button {
     font-family: "Times New Roman", Times, serif;
     font-weight: normal;
     font-size: 14px;
-    font-style: oblique;
 }
 
 .box-6 {
     margin-top: 100px;
     display: grid;
     gap: 10px;
-    grid-template-columns:16% 16% 16% 16% 16% 16%;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    margin-bottom: 50px;
 }
 
 .minibox6-2-1 {
     text-align: center;
     font-weight: bold;
     font-size: 13px;
+    cursor: pointer;
 }

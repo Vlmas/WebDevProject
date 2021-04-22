@@ -40,6 +40,7 @@ export class BuildYourLexusComponent implements OnInit {
       dimensions: '4700,1800,1450'
     }
     this.carsService.addCar(this.car);
+    this.router.navigate([''])
   }
 
   swapFlag() {
@@ -49,5 +50,9 @@ export class BuildYourLexusComponent implements OnInit {
     } else {
       this.router.navigate(['/login']);
     }
+  }
+
+  logout() {
+    this.router.navigate(['/login']);
   }
 }
