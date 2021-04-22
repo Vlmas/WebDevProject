@@ -49,8 +49,7 @@ p:hover {
     align-items: center;
     position: absolute;
     background-color: white;
-    margin-top: -90px;
-    margin-left: -2000px;
+    margin-top: -180px;
     font-size: 8px;
     width: 100%;
     border: black;
@@ -134,7 +133,7 @@ img {
 }
 
 .search-active {
-    margin-left: 0px;
+    margin-top: -90px;
 }
 
 .slide-active {
