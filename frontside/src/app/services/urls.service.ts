@@ -16,4 +16,12 @@ export class UrlsService {
   getUrlsByPattern(pattern: string) {
     return URLS.filter(p => p.name.toLowerCase() === pattern.toLowerCase()) as Url[];
   }
+
+  // getUrls(): Observable<Url> {
+  //   return this.client.get<Url>(`${this.BASE_URL}/urls`);
+  // }
+  
+  // getUrlsByPattern(pattern: string): Observable<Url> {
+  //   return this.client.get<Url>(`${this.BASE_URL}/urls/${pattern}`);
+  // }
 }

@@ -12,4 +12,8 @@ export class CarsBodyService {
   getCarsByBody(body: string) {
     return CARS.filter(p => p.body === body) as Car[];
   }
+
+  // getCarsByBody(body: string): Observable<Car> {
+  //   return this.client.get<Car>(${this.BASE_URL}/cars/${body});
+  // }
 }
