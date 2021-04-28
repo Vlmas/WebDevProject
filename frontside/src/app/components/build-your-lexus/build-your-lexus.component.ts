@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { slowOnset } from 'src/app/animations';
 import { Car } from 'src/app/models/car-model';
+import { Engine } from 'src/app/models/engine-model';
+import { Gearbox } from 'src/app/models/gearbox-model';
 import { CarsService } from 'src/app/services/cars.service';
 
 @Component({
@@ -27,19 +29,22 @@ export class BuildYourLexusComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  buildCar() {
+  buildCar() {  
     this.car = {
-      id: this.carsService.getCars().length + 1,
       modelName: this.modelName,
       body: this.body,
       photoForList: '../../../assets/images/default-lexus.png',
       photoForShow: '../../../assets/images/mainpagephoto.jpg',
       startingPrice: Number(this.startingPrise),
-      engine: this.carsService.getCarEngine(Number(this.engineId)),
-      gearBox: this.carsService.getCarGearbox(Number(this.gearboxId)),
+      engine: Number(this.engineId),
+      gearBox: Number(this.gearboxId),
       dimensions: '4700,1800,1450'
-    }
-    this.carsService.addCar(this.car);
+    };
+
+    this.carsService.addCar(this.car as Car).subscribe(params => {
+      console.log('OK');
+    });
+
     this.router.navigate([''])
   }
 

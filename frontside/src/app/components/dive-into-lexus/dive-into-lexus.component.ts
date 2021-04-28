@@ -23,6 +23,8 @@ export class DiveIntoLexusComponent implements OnInit {
   }
 
   getCars(): void {
-    this.cars = this.carsService.getCars();
+    this.carsService.getCars().subscribe(cars => {
+      this.cars = cars;
+    })
   }
 }

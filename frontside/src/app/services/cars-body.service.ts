@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CARS } from '../fake-db';
+import { Observable } from 'rxjs';
 import { Car } from '../models/car-model';
 
 @Injectable({
@@ -7,13 +8,11 @@ import { Car } from '../models/car-model';
 })
 export class CarsBodyService {
 
-  constructor() { }
+  BASE_URL: string = 'http://localhost:8000/api';
 
-  getCarsByBody(body: string) {
-    return CARS.filter(p => p.body === body) as Car[];
+  constructor(private client: HttpClient) { }
+
+  getCarsByBody(body: string): Observable<Car[]> {
+    return this.client.get<Car[]>(`${this.BASE_URL}/models/bodies/${body}`);
   }
-
-  // getCarsByBody(body: string): Observable<Car> {
-  //   return this.client.get<Car>(${this.BASE_URL}/cars/${body});
-  // }
 }

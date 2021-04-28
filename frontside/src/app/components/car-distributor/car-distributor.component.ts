@@ -27,8 +27,12 @@ export class CarDistributorComponent implements OnInit {
   getCars() {
     this.route.paramMap.subscribe(params => {
       let body = String(params.get('carBody'));
-      this.cars = this.carsBodyService.getCarsByBody(body);
-      this.title = (this.cars[0].body === 'performance') ? this.cars[0].body.toUpperCase() : this.cars[0].body?.toUpperCase() + 'S';
+      this.carsBodyService.getCarsByBody(body).subscribe(cars => {
+        this.cars = cars;
+        if(this.cars.length) {
+          this.title = (this.cars[0].body === 'performance') ? this.cars[0].body.toUpperCase() : this.cars[0].body?.toUpperCase() + 'S';
+        }
+      })
     })
   }
 }

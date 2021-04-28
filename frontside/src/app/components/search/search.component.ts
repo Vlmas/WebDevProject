@@ -20,7 +20,9 @@ export class SearchComponent implements OnInit {
   }
 
   getUrls() {
-    this.urls = this.urlsService.getUrlsByPattern(this.pattern);
+    this.urlsService.getUrlsByPattern(this.pattern).subscribe(urls => {
+      this.urls = urls;
+    });
   }
 
   getPatternAndUrls() {

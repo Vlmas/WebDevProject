@@ -22,6 +22,8 @@ export class FutureComponent implements OnInit {
   }
 
   getConceptCars() {
-    this.conceptCars = this.carsService.getConceptCars();
+    this.carsService.getConceptCars().subscribe(conceptCars => {
+      this.conceptCars = conceptCars;
+    });
   }
 }
