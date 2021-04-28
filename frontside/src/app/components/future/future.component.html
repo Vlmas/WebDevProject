@@ -1,9 +1,10 @@
-<div @tr class="concept-cars-container">
+<div @tr *ngIf="isLogged()" class="concept-cars-container">
     <div class="concept-cars">
+        <img (click)="logout()" class="logout" src="https://cdn3.iconfinder.com/data/icons/user-interface-169/32/logout-128.png" width="30">
         <h3 class="logo">FUTURE OF THE LEXUS</h3>
 
         <div class="show" *ngFor="let car of conceptCars">
-            <img [src]="car.assetUrl" width="600">
+            <img class="c-img" [src]="car.assetUrl" width="600">
             <p class="c-name">{{car.name}}</p>
             <p class="c-descr">{{car.description}}</p>
             <p class="c-date">COMING IN {{car.releaseDate}}</p>

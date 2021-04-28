@@ -10,7 +10,5 @@ export interface Car {
     startingPrice: number,
     engine: Engine | number,
     gearBox: Gearbox | number,
-    // engine: Engine,
-    // gearBox: Gearbox,
     dimensions: string
 }

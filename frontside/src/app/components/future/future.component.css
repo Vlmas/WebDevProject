@@ -2,6 +2,7 @@
     width: 98%;
     display: block;
     margin: 0 auto;
+    position: relative;
 }
 
 .logo {
@@ -22,7 +23,7 @@
     border-bottom: 1px solid #bdbbbb;
 }
 
-img {
+.c-img {
     border: 3px ridge #2f2f2f;
 }
 
@@ -43,4 +44,16 @@ img {
 .c-date {
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+.logout {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    transition: 10ms;
+}
+
+.logout:hover {
+    opacity: 0.7;
 }

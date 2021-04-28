@@ -17,8 +17,7 @@ export class LoginComponent implements OnInit {
   username: string = "";
   password: string = "";
 
-  constructor(private loginService: LoginService,
-    private router: Router) { }
+  constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');
@@ -36,7 +35,7 @@ export class LoginComponent implements OnInit {
       this.username = '';
       this.password = '';
     })
-    this.router.navigate(['/build-your-lexus']);
+    this.router.navigate(['']);
   }
 
   logout() {

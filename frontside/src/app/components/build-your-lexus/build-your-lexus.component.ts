@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { slowOnset } from 'src/app/animations';
 import { Car } from 'src/app/models/car-model';
-import { Engine } from 'src/app/models/engine-model';
-import { Gearbox } from 'src/app/models/gearbox-model';
 import { CarsService } from 'src/app/services/cars.service';
 
 @Component({

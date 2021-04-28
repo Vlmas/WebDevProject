@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { slowOnset } from 'src/app/animations';
 import { ConceptCar } from 'src/app/models/concept-car-model';
 import { CarsService } from 'src/app/services/cars.service';
@@ -15,7 +16,7 @@ export class FutureComponent implements OnInit {
 
   conceptCars!: ConceptCar[];
 
-  constructor(private carsService: CarsService) { }
+  constructor(private carsService: CarsService, private router: Router) { }
 
   ngOnInit(): void {
     this.getConceptCars();
@@ -25,5 +26,19 @@ export class FutureComponent implements OnInit {
     this.carsService.getConceptCars().subscribe(conceptCars => {
       this.conceptCars = conceptCars;
     });
+  }
+
+  isLogged() {
+    const token = localStorage.getItem('token');
+    if(token) {
+      return true;
+    } else {
+      this.router.navigate(['/login']);
+      return false;
+    }
+  }
+
+  logout() {
+    this.router.navigate(['/login']);
   }
 }
