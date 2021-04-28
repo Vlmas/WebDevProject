@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 class Engine(models.Model):
-    volume = models.IntegerField(default=0)
+    volume = models.FloatField(default=0)
     type = models.CharField(default='', max_length=50)
     configuration = models.CharField(max_length=50, default='')
     power = models.IntegerField(default=0)
@@ -22,7 +22,7 @@ class Engine(models.Model):
         }
 
     def __str__(self):
-        return f'{self.id} -> Engine: {self.volume}L {self.configuration}'
+        return f'{self.id} -> Engine: {self.volume}L {self.configuration}, {self.power} BHP'
 
 
 class Gearbox(models.Model):
@@ -49,12 +49,12 @@ class Gearbox(models.Model):
 class Car(models.Model):
     modelName = models.CharField(max_length=30, default='')
     body = models.CharField(max_length=30, default='')
-    photoForList = models.CharField(max_length=200, default='')
-    photoForShow = models.CharField(max_length=200, default='')
+    photoForList = models.CharField(max_length=200, default='../../../assets/images/.png')
+    photoForShow = models.CharField(max_length=200, default='../../../assets/images/-STATE.jpg')
     startingPrice = models.IntegerField(default=0)
     engine = models.ForeignKey(Engine, on_delete=models.CASCADE, null=True, related_name='cars')
     gearBox = models.ForeignKey(Gearbox, on_delete=models.CASCADE, null=True, related_name='cars')
-    dimensions = models.CharField(max_length=100, default='')
+    dimensions = models.CharField(max_length=100, default=',,')
 
     class Meta:
         verbose_name = 'Car'

@@ -1,4 +1,6 @@
 from rest_framework import serializers
+from rest_framework.exceptions import ValidationError
+from drf_writable_nested import WritableNestedModelSerializer
 from .models import *
 
 
@@ -44,7 +46,7 @@ class ConceptCarSerializer(serializers.Serializer):
 class EngineSerializer(serializers.ModelSerializer):
     class Meta:
         model = Engine
-        fields = ('id', 'volume', 'type', 'configuration', 'power',)
+        fields = ('id', 'volume', 'type', 'configuration', 'power')
 
 
 class GearboxSerializer(serializers.ModelSerializer):
@@ -53,11 +55,40 @@ class GearboxSerializer(serializers.ModelSerializer):
         fields = ('id', 'type', 'gearCount', 'clutchCount')
 
 
-class CarSerializer(serializers.ModelSerializer):
+class CarSerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
     engine = EngineSerializer(read_only=True)
     gearBox = GearboxSerializer(read_only=True)
 
-    class Meta(serializers.ModelSerializer):
+    def to_internal_value(self, data):
+        engine_id = data.get('engine')
+        gearbox_id = data.get('gearBox')
+        internal_data = super().to_internal_value(data)
+
+        try:
+            engine = Engine.objects.get(pk=engine_id)
+        except Engine.DoesNotExist:
+            raise ValidationError(
+                {
+                    'engine': ['Invalid classes primary key']
+                },
+                code='invalid',
+            )
+
+        try:
+            gearbox = Gearbox.objects.get(pk=gearbox_id)
+        except Gearbox.DoesNotExist:
+            raise ValidationError(
+                {
+                    'gearBox': ['Invalid classes primary key']
+                },
+                code='invalid',
+            )
+        internal_data['engine'] = engine
+        internal_data['gearBox'] = gearbox
+
+        return internal_data
+
+    class Meta:
         model = Car
         fields = ('id', 'modelName', 'body', 'photoForList', 'photoForShow', 'startingPrice',
                   'engine', 'gearBox', 'dimensions')
