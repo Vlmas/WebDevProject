@@ -46,6 +46,17 @@ class Gearbox(models.Model):
         return f'{self.id} -> Gearbox: {self.type}, {self.gearCount} speed'
 
 
+class CarManager(models.Manager):
+    def get_sedans(self):
+        return super().filter(body='sedan')
+
+    def get_by_specific_body(self, body):
+        return super().filter(body__iexact=body)
+
+    def get_dimensions_as_int_array(self):
+        return [int(_) for _ in self.dimensions.split(',')]
+
+
 class Car(models.Model):
     modelName = models.CharField(max_length=30, default='')
     body = models.CharField(max_length=30, default='')
@@ -55,6 +66,7 @@ class Car(models.Model):
     engine = models.ForeignKey(Engine, on_delete=models.CASCADE, null=True, related_name='cars')
     gearBox = models.ForeignKey(Gearbox, on_delete=models.CASCADE, null=True, related_name='cars')
     dimensions = models.CharField(max_length=100, default=',,')
+    objects = CarManager()
 
     class Meta:
         verbose_name = 'Car'
