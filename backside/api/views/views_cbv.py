@@ -12,7 +12,6 @@ class CarListAPIView(APIView):
     def get(self, request):
         cars = Car.objects.all()
         serializer = CarSerializer(cars, many=True)
-        permission_classes = (IsAuthenticated,)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request):
@@ -133,7 +132,6 @@ class ConceptCarListGenericView(generics.ListAPIView):
 class ConceptCarDetailGenericView(generics.RetrieveUpdateDestroyAPIView):
     queryset = ConceptCar.objects.all()
     serializer_class = ConceptCarSerializer
-
 
 
 class ConceptCarListAPIView(APIView):
