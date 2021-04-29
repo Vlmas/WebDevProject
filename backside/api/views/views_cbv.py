@@ -1,6 +1,8 @@
 from django.shortcuts import Http404
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework import generics
 from rest_framework import status
 from api.models import Car, Url, ConceptCar
 from api.serializers import CarSerializer, UrlSerializer, ConceptCarSerializer
@@ -10,6 +12,7 @@ class CarListAPIView(APIView):
     def get(self, request):
         cars = Car.objects.all()
         serializer = CarSerializer(cars, many=True)
+        permission_classes = (IsAuthenticated,)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
     def post(self, request):
@@ -119,6 +122,18 @@ class UrlDetailAPIView(APIView):
             },
             status=status.HTTP_200_OK
         )
+
+
+class ConceptCarListGenericView(generics.ListAPIView):
+    queryset = ConceptCar.objects.all()
+    serializer_class = ConceptCarSerializer
+    permission_classes = (IsAuthenticated,)
+
+
+class ConceptCarDetailGenericView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ConceptCar.objects.all()
+    serializer_class = ConceptCarSerializer
+
 
 
 class ConceptCarListAPIView(APIView):

@@ -12,7 +12,7 @@ urlpatterns = [
     path('models/bodies/<str:body>/', CarListByBodyAPIView.as_view()),
     path('urls/', UrlListAPIView.as_view()),
     path('urls/<str:name>/', UrlDetailAPIView.as_view()),
-    path('future/', ConceptCarListAPIView.as_view()),
+    path('future/', ConceptCarListGenericView.as_view()),
     path('future/<int:concept_id>/', ConceptCarDetailAPIView.as_view()),
     path('login/', obtain_jwt_token)
 ]
