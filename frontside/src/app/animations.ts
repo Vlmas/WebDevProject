@@ -8,4 +8,4 @@ export const slowOnset = trigger('tr', [
     transition(':leave', [
       animate('800ms', style({opacity: 0}))
     ])
-])
+]);
